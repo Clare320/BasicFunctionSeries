@@ -11,6 +11,8 @@ import UIKit
 class LongScreenShotViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var toSuperBottomCst: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,11 +22,7 @@ class LongScreenShotViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @IBAction func getScreenShot(_ sender: Any) {
-        let size = self.tableView.contentSize
-        let renderer = UIGraphicsImageRenderer(bounds: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let image = renderer.image { context in
-            self.tableView.layer.render(in: context.cgContext)
-        }
+        let image = testLongShot()
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         vc.image = image
@@ -33,21 +31,38 @@ class LongScreenShotViewController: UIViewController, UITableViewDelegate, UITab
     
     func testLongShot() -> UIImage {
         
-        view.snapshotView(afterScreenUpdates: <#T##Bool#>)
-        return UIImage()
+        let snapshotView = view.snapshotView(afterScreenUpdates: false)
+        
+        if let snapshot = snapshotView {
+            view.addSubview(snapshot)
+        }
+        
+        let oldOffset = tableView.contentOffset
+        tableView.contentOffset = .zero
+        let contentSize = tableView.contentSize
+        
+        var navigationHeight: CGFloat = 0
+        if (CGSize(width: 375, height: 812) == UIScreen.main.bounds.size || CGSize(width: 812, height: 375) == UIScreen.main.bounds.size) {
+            navigationHeight = 88
+        } else {
+            navigationHeight = 64
+        }
+        
+        let height = UIScreen.main.bounds.height - navigationHeight
+        toSuperBottomCst.constant = height - contentSize.height
+        
+        let renderer = UIGraphicsImageRenderer(size: contentSize)
+        let image = renderer.image { (context) in
+            self.tableView.layer.render(in: context.cgContext)
+        }
+        tableView.contentOffset = oldOffset
+        toSuperBottomCst.constant = 0
+        
+        snapshotView?.removeFromSuperview()
+        
+        return image
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
     //MARK: - UITableViewDataSource && UITableViewDelegate
     

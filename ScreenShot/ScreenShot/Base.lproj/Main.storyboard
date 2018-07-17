@@ -21,17 +21,24 @@
                                 <rect key="frame" x="12" y="76" width="351" height="579"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tE-a5-6Vb">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="284.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="186.5"/>
                                         <state key="normal" title="普通截图"/>
                                         <connections>
                                             <segue destination="QH0-zW-V6i" kind="push" id="VLT-er-p0S"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dui-Rm-EwR">
-                                        <rect key="frame" x="0.0" y="294.5" width="351" height="284.5"/>
+                                        <rect key="frame" x="0.0" y="196.5" width="351" height="186"/>
                                         <state key="normal" title="滚动视图截图"/>
                                         <connections>
                                             <segue destination="Sgj-VG-poi" kind="push" id="0tD-gL-3I0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-P2-ALQ">
+                                        <rect key="frame" x="0.0" y="392.5" width="351" height="186.5"/>
+                                        <state key="normal" title="图片适应"/>
+                                        <connections>
+                                            <segue destination="Tgc-c3-U46" kind="push" id="wD7-Uv-hoc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -74,6 +81,62 @@
             </objects>
             <point key="canvasLocation" x="1809" y="-587"/>
         </scene>
+        <!--AutoResizing-->
+        <scene sceneID="awV-eW-ZZK">
+            <objects>
+                <viewController id="Tgc-c3-U46" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dxg-ea-qCq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mid_placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="3q9-W7-rZH">
+                                <rect key="frame" x="10" y="74" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="u3W-Cc-fpm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mid_placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="UaQ-1E-jsh">
+                                <rect key="frame" x="10" y="184" width="355" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="ZIB-Oy-jek"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zSA-x4-Z4Y">
+                                <rect key="frame" x="10" y="319" width="355" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Vz8-xB-L1j"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mid_placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="Lpm-9b-6U2">
+                                <rect key="frame" x="10" y="404" width="355" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="uBU-oY-LZk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xvu-ET-Cxs" firstAttribute="trailing" secondItem="UaQ-1E-jsh" secondAttribute="trailing" constant="10" id="5W9-lQ-ome"/>
+                            <constraint firstItem="zSA-x4-Z4Y" firstAttribute="top" secondItem="UaQ-1E-jsh" secondAttribute="bottom" constant="10" id="Pnr-Ml-Qsk"/>
+                            <constraint firstItem="zSA-x4-Z4Y" firstAttribute="leading" secondItem="xvu-ET-Cxs" secondAttribute="leading" constant="10" id="QZg-2X-UB5"/>
+                            <constraint firstItem="xvu-ET-Cxs" firstAttribute="trailing" secondItem="3q9-W7-rZH" secondAttribute="trailing" constant="10" id="R4b-L2-58j"/>
+                            <constraint firstItem="xvu-ET-Cxs" firstAttribute="trailing" secondItem="zSA-x4-Z4Y" secondAttribute="trailing" constant="10" id="X3A-RO-zcB"/>
+                            <constraint firstItem="3q9-W7-rZH" firstAttribute="top" secondItem="xvu-ET-Cxs" secondAttribute="top" constant="10" id="Y7D-UQ-eAV"/>
+                            <constraint firstItem="xvu-ET-Cxs" firstAttribute="trailing" secondItem="Lpm-9b-6U2" secondAttribute="trailing" constant="10" id="frg-W4-0xM"/>
+                            <constraint firstItem="Lpm-9b-6U2" firstAttribute="top" secondItem="zSA-x4-Z4Y" secondAttribute="bottom" constant="10" id="jPP-9g-6Xh"/>
+                            <constraint firstItem="UaQ-1E-jsh" firstAttribute="leading" secondItem="xvu-ET-Cxs" secondAttribute="leading" constant="10" id="oy7-VM-Yiq"/>
+                            <constraint firstItem="UaQ-1E-jsh" firstAttribute="top" secondItem="3q9-W7-rZH" secondAttribute="bottom" constant="10" id="q5w-yD-Agt"/>
+                            <constraint firstItem="3q9-W7-rZH" firstAttribute="leading" secondItem="xvu-ET-Cxs" secondAttribute="leading" constant="10" id="uck-L2-B8H"/>
+                            <constraint firstItem="Lpm-9b-6U2" firstAttribute="leading" secondItem="xvu-ET-Cxs" secondAttribute="leading" constant="10" id="vzF-GZ-mGy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xvu-ET-Cxs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AutoResizing" largeTitleDisplayMode="always" id="Q7E-WS-de9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtM-2O-yHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="209"/>
+        </scene>
         <!--长截图-->
         <scene sceneID="DcX-Mf-TcI">
             <objects>
@@ -109,6 +172,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wae-11-POK" id="h9l-2r-uqR"/>
+                        <outlet property="toSuperBottomCst" destination="l7n-6U-nZz" id="tEz-Yq-iqu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4i-Qd-GRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,4 +228,8 @@
             <point key="canvasLocation" x="144.80000000000001" y="-579.76011994002999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mid_placeHolder" width="60" height="60"/>
+        <image name="placeholder" width="120" height="120"/>
+    </resources>
 </document>
