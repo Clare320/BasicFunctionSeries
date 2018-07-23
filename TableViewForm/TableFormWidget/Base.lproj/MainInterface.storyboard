@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="TableFormWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="162-MM-zuy">
+                                <rect key="frame" x="138.5" y="14" width="43" height="72"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_address_maillist" translatesAutoresizingMaskIntoConstraints="NO" id="V7i-1W-j19">
+                                        <rect key="frame" x="8" y="0.0" width="27" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="7fT-k6-u06"/>
+                                            <constraint firstAttribute="width" constant="27" id="LP1-xc-qXs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTE-Gw-ZDZ">
+                                        <rect key="frame" x="5" y="37" width="33" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Alert">
+                                            <color key="titleColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="presentAlert:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="DBt-Oj-TcO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mTE-Gw-ZDZ" firstAttribute="top" secondItem="V7i-1W-j19" secondAttribute="bottom" constant="8" id="6UF-36-zlW"/>
+                                    <constraint firstAttribute="trailing" secondItem="mTE-Gw-ZDZ" secondAttribute="trailing" constant="5" id="73I-MV-itf"/>
+                                    <constraint firstItem="mTE-Gw-ZDZ" firstAttribute="leading" secondItem="162-MM-zuy" secondAttribute="leading" constant="5" id="VkF-pk-vnj"/>
+                                    <constraint firstItem="V7i-1W-j19" firstAttribute="top" secondItem="162-MM-zuy" secondAttribute="top" id="ZA5-lr-vPU"/>
+                                    <constraint firstAttribute="bottom" secondItem="mTE-Gw-ZDZ" secondAttribute="bottom" constant="5" id="bcc-9W-vf5"/>
+                                    <constraint firstItem="V7i-1W-j19" firstAttribute="centerX" secondItem="162-MM-zuy" secondAttribute="centerX" id="gvr-gV-OdN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="162-MM-zuy" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="0UZ-kc-wHA"/>
+                            <constraint firstItem="162-MM-zuy" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="1po-LC-Bt4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="116.94152923538232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_address_maillist" width="27" height="29"/>
+    </resources>
+</document>

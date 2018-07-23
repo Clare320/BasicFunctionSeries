@@ -41,6 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.scheme?.contains("tableFormWidget") == true {
+            
+            /// 根据widget传过来事件做具体处理，更新Group中共享数据来刷新Widget显示
+            let alert = UIAlertController(title: nil, message: "absoluteString:\(url.absoluteString), host:\(url.host), path:\(url.path)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            return true
+        }
+        return false
+    }
+    
+    
 }
 

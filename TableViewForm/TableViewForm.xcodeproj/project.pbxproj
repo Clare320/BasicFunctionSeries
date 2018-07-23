@@ -17,7 +17,36 @@
 		84185F54210062130006A24C /* TextfieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84185F52210062130006A24C /* TextfieldTableViewCell.xib */; };
 		84185F57210062240006A24C /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84185F55210062240006A24C /* ButtonTableViewCell.swift */; };
 		84185F58210062240006A24C /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84185F56210062240006A24C /* ButtonTableViewCell.xib */; };
+		84391BB22105A529002850B7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84391BB12105A529002850B7 /* NotificationCenter.framework */; };
+		84391BB52105A529002850B7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391BB42105A529002850B7 /* TodayViewController.swift */; };
+		84391BB82105A529002850B7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84391BB62105A529002850B7 /* MainInterface.storyboard */; };
+		84391BBC2105A529002850B7 /* TableFormWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84391BAF2105A529002850B7 /* TableFormWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84391BC12105AE16002850B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84185F4421005C440006A24C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84391BBA2105A529002850B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84185F3221005C420006A24C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84391BAE2105A529002850B7;
+			remoteInfo = TableFormWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84391BC02105A52A002850B7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84391BBC2105A529002850B7 /* TableFormWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84185F3A21005C420006A24C /* TableViewForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +61,13 @@
 		84185F52210062130006A24C /* TextfieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextfieldTableViewCell.xib; sourceTree = "<group>"; };
 		84185F55210062240006A24C /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		84185F56210062240006A24C /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		84391BAF2105A529002850B7 /* TableFormWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TableFormWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84391BB12105A529002850B7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		84391BB42105A529002850B7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		84391BB72105A529002850B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		84391BB92105A529002850B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84391BC22105B68B002850B7 /* TableViewForm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TableViewForm.entitlements; sourceTree = "<group>"; };
+		84391BC32105B6C2002850B7 /* TableFormWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TableFormWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +78,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84391BAC2105A529002850B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84391BB22105A529002850B7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				84185F3C21005C420006A24C /* TableViewForm */,
+				84391BB32105A529002850B7 /* TableFormWidget */,
+				84391BB02105A529002850B7 /* Frameworks */,
 				84185F3B21005C420006A24C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				84185F3A21005C420006A24C /* TableViewForm.app */,
+				84391BAF2105A529002850B7 /* TableFormWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +111,7 @@
 		84185F3C21005C420006A24C /* TableViewForm */ = {
 			isa = PBXGroup;
 			children = (
+				84391BC22105B68B002850B7 /* TableViewForm.entitlements */,
 				84185F3D21005C420006A24C /* AppDelegate.swift */,
 				84185F3F21005C420006A24C /* ViewController.swift */,
 				84185F4F210061740006A24C /* NormalTableViewController.swift */,
@@ -79,6 +127,25 @@
 			path = TableViewForm;
 			sourceTree = "<group>";
 		};
+		84391BB02105A529002850B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84391BB12105A529002850B7 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84391BB32105A529002850B7 /* TableFormWidget */ = {
+			isa = PBXGroup;
+			children = (
+				84391BC32105B6C2002850B7 /* TableFormWidget.entitlements */,
+				84391BB42105A529002850B7 /* TodayViewController.swift */,
+				84391BB62105A529002850B7 /* MainInterface.storyboard */,
+				84391BB92105A529002850B7 /* Info.plist */,
+			);
+			path = TableFormWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +156,34 @@
 				84185F3621005C420006A24C /* Sources */,
 				84185F3721005C420006A24C /* Frameworks */,
 				84185F3821005C420006A24C /* Resources */,
+				84391BC02105A52A002850B7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84391BBB2105A529002850B7 /* PBXTargetDependency */,
 			);
 			name = TableViewForm;
 			productName = TableViewForm;
 			productReference = 84185F3A21005C420006A24C /* TableViewForm.app */;
 			productType = "com.apple.product-type.application";
+		};
+		84391BAE2105A529002850B7 /* TableFormWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84391BBF2105A52A002850B7 /* Build configuration list for PBXNativeTarget "TableFormWidget" */;
+			buildPhases = (
+				84391BAB2105A529002850B7 /* Sources */,
+				84391BAC2105A529002850B7 /* Frameworks */,
+				84391BAD2105A529002850B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableFormWidget;
+			productName = TableFormWidget;
+			productReference = 84391BAF2105A529002850B7 /* TableFormWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -111,6 +197,19 @@
 				TargetAttributes = {
 					84185F3921005C420006A24C = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					84391BAE2105A529002850B7 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				84185F3921005C420006A24C /* TableViewForm */,
+				84391BAE2105A529002850B7 /* TableFormWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +242,15 @@
 				84185F58210062240006A24C /* ButtonTableViewCell.xib in Resources */,
 				84185F4321005C420006A24C /* Main.storyboard in Resources */,
 				84185F54210062130006A24C /* TextfieldTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84391BAD2105A529002850B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84391BC12105AE16002850B7 /* Assets.xcassets in Resources */,
+				84391BB82105A529002850B7 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +269,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84391BAB2105A529002850B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84391BB52105A529002850B7 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84391BBB2105A529002850B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84391BAE2105A529002850B7 /* TableFormWidget */;
+			targetProxy = 84391BBA2105A529002850B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84185F4121005C420006A24C /* Main.storyboard */ = {
@@ -177,6 +302,14 @@
 				84185F4721005C440006A24C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84391BB62105A529002850B7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84391BB72105A529002850B7 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -299,7 +432,9 @@
 		84185F4D21005C440006A24C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TableViewForm/TableViewForm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBFA334TD8;
 				INFOPLIST_FILE = TableViewForm/Info.plist;
@@ -317,7 +452,9 @@
 		84185F4E21005C440006A24C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TableViewForm/TableViewForm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBFA334TD8;
 				INFOPLIST_FILE = TableViewForm/Info.plist;
@@ -327,6 +464,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Clare320.TableViewForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84391BBD2105A52A002850B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TableFormWidget/TableFormWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XBFA334TD8;
+				INFOPLIST_FILE = TableFormWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Clare320.TableViewForm.TableFormWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84391BBE2105A52A002850B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TableFormWidget/TableFormWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XBFA334TD8;
+				INFOPLIST_FILE = TableFormWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Clare320.TableViewForm.TableFormWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -349,6 +526,15 @@
 			buildConfigurations = (
 				84185F4D21005C440006A24C /* Debug */,
 				84185F4E21005C440006A24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84391BBF2105A52A002850B7 /* Build configuration list for PBXNativeTarget "TableFormWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84391BBD2105A52A002850B7 /* Debug */,
+				84391BBE2105A52A002850B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
